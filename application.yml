@@ -1,0 +1,12 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/QuanticGameDev/cloud-properties.git
+          search-paths:
+          - '{application}'
