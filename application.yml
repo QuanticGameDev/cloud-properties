@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 9091
 spring:
   application:
     name: config-service
@@ -10,3 +10,12 @@ spring:
           uri: https://github.com/QuanticGameDev/cloud-properties.git
           search-paths:
           - '{application}'
+          
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9092/eureka/
+  instance:
+    hostname: localhost

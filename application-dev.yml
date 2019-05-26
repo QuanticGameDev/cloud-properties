@@ -1,0 +1,21 @@
+spring:
+  profiles: dev
+  application:
+    name: auth-server
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:localhost;DB_CLOSE_ON_EXIT=FALSE
+    username: admin
+    password:
+
+server:
+  port: 9098
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9092/eureka/
+  instance:
+    hostname: localhost
