@@ -2,7 +2,12 @@ spring:
   profiles: dev
   application:
     name: auth-server
-
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/liberty?createDatabaseIfNotExist=true
+    username: root
+    password: myPassword
+   
 server:
   port: 9098
 
