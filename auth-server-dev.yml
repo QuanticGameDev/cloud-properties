@@ -1,15 +1,13 @@
 spring:
-	  profiles: uat
-	  application:
-	    name: auth-server
-	  datasource:
-	    jdbc-url: jdbc:mysql://localhost:3306/liberty?createDatabaseIfNotExist=true
-	    username: root
-	    password: myPassword
-	  jpa:
-	    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-	    hibernate:
-	      ddl-auto: update
+ profiles: dev
+  application:
+   name: auth-server
+     datasource: jdbc-url: jdbc:mysql://localhost:3306/liberty?createDatabaseIfNotExist=true
+     username: root
+     password: myPassword
+   jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate: ddl-auto: update
 	
 server:
   port: 9098
